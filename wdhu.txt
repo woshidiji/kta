@@ -1,0 +1,28 @@
+proxies:
+  - name: MyReality
+    type: vless
+    server: 13.125.234.223
+    port: 443
+    uuid: 03262445-14e4-48fa-a4f6-57703b0defe1
+    network: tcp
+    tls: true
+    udp: true
+    flow: xtls-rprx-vision
+
+    servername: www.microsoft.com
+
+    reality-opts:
+      public-key: IdusHUG7bC1RqUa2CYWWk-TD3ThzWtYto1_onVqTEwU
+      short-id: 6ba85179e30d4fc2
+
+    client-fingerprint: chrome
+
+proxy-groups:
+  - name: GLOBAL
+    type: select
+    proxies:
+      - MyReality
+      - DIRECT
+
+rules:
+  - MATCH,GLOBAL
