@@ -1,12 +1,32 @@
+mixed-port: 7890
+
+allow-lan: true
+mode: rule
+
+log-level: info
+
+dns:
+  enable: true
+  listen: 0.0.0.0:1053
+  enhanced-mode: fake-ip
+
+  nameserver:
+    - 8.8.8.8
+    - 1.1.1.1
+
 proxies:
   - name: MyReality
     type: vless
+
     server: 13.125.234.223
     port: 443
+
     uuid: 03262445-14e4-48fa-a4f6-57703b0defe1
+
     network: tcp
     tls: true
     udp: true
+
     flow: xtls-rprx-vision
 
     servername: www.microsoft.com
@@ -20,6 +40,7 @@ proxies:
 proxy-groups:
   - name: GLOBAL
     type: select
+
     proxies:
       - MyReality
       - DIRECT
