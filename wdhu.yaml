@@ -1,3 +1,4 @@
+
 mixed-port: 7890
 
 allow-lan: true
@@ -15,7 +16,7 @@ dns:
     - 1.1.1.1
 
 proxies:
-  - name: 🇰🇷 Korea-01
+  - name: "🇰🇷 Korea-01"
     type: vless
 
     server: 13.125.234.223
@@ -42,8 +43,9 @@ proxy-groups:
     type: select
 
     proxies:
-      - MyReality
+      - "🇰🇷 Korea-01"
       - DIRECT
 
 rules:
   - MATCH,GLOBAL
+```
