@@ -15,7 +15,7 @@ dns:
     - 1.1.1.1
 
 proxies:
-  - name: MyReality
+  - name: 🇰🇷 Korea-01
     type: vless
 
     server: 13.125.234.223
